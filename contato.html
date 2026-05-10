@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Dra. Maria Luiza</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     <header class="navbar">
+     <div class="container nav-container">
+
+        <div class="logo-area">
+            <!-- sua logo aqui -->
+             <img src="img/Grupo-LogoLuiza.svg" alt="Logo">
+        </div>
+
+        <!-- BOTÃO HAMBURGUER -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <!-- MENU -->
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+                <li><a href="radiologia.html">Radiologia</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+   <main>
+  <section class="hero contact-hero">
+    <div class="container hero-grid">
+        
+        <div class="hero-text">
+            <p class="overline">FALE COM NOSSA EQUIPE</p>
+            <h1>Agende sua Consulta ou Exame Digital</h1>
+            
+            <p class="hero-desc">
+                Atendemos em Carmo do Rio Claro (MG), com estrutura preparada para consultas e exames odontológicos. Fale conosco pelo WhatsApp e agende seu horário com praticidade.
+            </p>
+
+            <div class="hero-actions">
+                <a href="https://wa.me/5513999999999" target="_blank" class="btn-white">
+                    Agendar pelo WhatsApp
+                </a>
+               
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="img/mf.png" alt="Localização Clínica Dra. Maria Luiza">
+              <div class="rating-card">
+        <div class="star">★</div>
+        <div>
+            <span class="rating-label">AVALIAÇÃO</span>
+            <strong>4.9 / 5.0</strong>
+        </div>
+    </div>
+        </div>
+
+    </div>
+</section>
+   <section class="map-section container">
+    <div class="map-card card-item">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.584310547!2d-46.119!3d-20.972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b633a9acfac4d7%3A0x7df727a08cbf61bb!2sR.%20Wenceslau%20Braz%2C%2069%20-%20Carmo%20do%20Rio%20Claro%2C%20MG%2C%2037150-000!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr" 
+            width="100%" 
+            height="400" 
+            style="border:0; border-radius: 15px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    
+    <div class="address-details" style="margin-top: 20px; text-align: center;">
+        <p style="color: #064333; font-weight: 600;">
+            <i class="fa-solid fa-location-dot" style="color: #a7f3d0; margin-right: 8px;"></i>
+            Rua Wenceslau Braz, 69 - Carmo do Rio Claro, MG
+        </p><br>
+    </div>
+</section>
+    
+</main>
+ <footer class="footer-black">
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <h4 class="footer-logo">ML<span>ODONTOLOGIA </span></h4>
+            <p class="footer-desc">Cuidando da sua saúde bucal com tecnologia de ponta e humanização há mais de 30 anos.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h5>Navegação</h5>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="servicos.html">Nossos Serviços</a></li>
+                <li><a href="radiologia.html">Radiologia Digital</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h5>Contato</h5>
+            <p>Rua Wenceslau Braz , 91 centro</p>
+            <p>Carmo do Rio Claro MG</p>
+            <p><strong>Tel:</strong> (35)981465030 </p>
+            <p><strong>Email:</strong> contato@clinica.com.br</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Clínica Odontológica - Todos os direitos reservados.</p>
+    </div>
+    <div class="service-item animate"></div>
+    <script>
+const elements = document.querySelectorAll('.animate');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+</footer>
+<script>
+window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+</script>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-menu");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
+</script>
+</body>
+</html>
